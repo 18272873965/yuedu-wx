@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<wxs src="./index.wxs" module="sc"/>
+<view>
+  <yd-nav bind:getData="onList"></yd-nav>
+
+  <view class="articles">
+    <view wx:if="{{scroll > 200}}" class="top" bindtap='scrollTop'><image src="/img/top.png"></image></view>
+    <view class="articles-left" wx:for="{{articles}}" wx:key="{{index}}" bindtap='goArticle' data-ids="{{item.id}}">
+        <image data-ids="{{item.id}}" src="{{item.img_url}}" mode="center"></image>
+        <view class="title" data-ids="{{item.id}}">《{{item.title}}》</view> 
+        <view class="content" data-ids="{{item.id}}">{{sc(item.content)}}</view>  
+    </view>
+    <view class="bottom" wx:if="{{!flag}}">- 到底了 -</view>
+  </view>
+</view>

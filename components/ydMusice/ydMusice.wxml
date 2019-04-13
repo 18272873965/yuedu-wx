@@ -1,0 +1,11 @@
+<!--components/ydMusice/ydMusice.wxml-->
+<view class="player-img" bindtap='setplay'>
+  <image wx:if="{{!plays}}" src="/img/play.png"></image>
+  <image wx:else src="/img/pause.png"></image>
+</view>
+<view class="player-box">
+  <view class="time">{{time}}</view>
+  <view class="player" style="width:{{width}}%">
+    <view class="player-infor"></view>
+  </view>
+</view>

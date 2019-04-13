@@ -1,0 +1,25 @@
+<!--components/Iarticle/Iarticle.wxml-->
+<wxs src="./Iarticle.wxs" module="rp" />
+<view>
+  <view class="article">
+    <view class="article-details">
+      <image src="{{article.img_url}}"></image>
+      <view class="details">
+        <view class="details-top">{{article.title}}</view>
+        <view class="details-infor">
+          <text>文：{{article.author}}</text>
+          <text> | 主播：{{article.podcast}}</text>
+        </view>
+      </view>
+      <view class="details-bottom"></view>
+      <yd-musice class="musice" url="{{article.mp3_url}}"></yd-musice>
+    </view>
+    <view class="content">
+      <rich-text nodes="{{rp(article.content)}}"></rich-text>
+    </view>
+    <view class="to-p-n">
+      <text bindtap="previou">上一篇</text>
+      <text bindtap="next">下一篇</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "yd-musice": "/components/ydMusice/ydMusice"
+  },
+  "navigationBarTitleText": "文章"
+}

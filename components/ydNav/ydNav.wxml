@@ -1,0 +1,4 @@
+<!--components/yuNav/ydNav.wxml-->
+  <view class="nav">
+    <text class="nav-list" wx:for="{{nav}}" wx:key="{{index}}" bindtap='toList' data-id="{{item.id}}">{{item.type}}</text>
+  </view>
